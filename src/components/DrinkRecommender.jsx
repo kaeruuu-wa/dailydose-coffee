@@ -244,7 +244,7 @@ export default function DrinkRecommender({ isOpen, onClose }) {
                                      disabled:opacity-40 disabled:cursor-not-allowed
                                      transition-all duration-150"
                         >
-                          Find My Drink ✨
+                          Recommend my Drink ✨
                         </button>
                       )}
                     </div>

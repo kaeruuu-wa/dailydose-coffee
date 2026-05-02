@@ -87,7 +87,7 @@ export default function Visit() {
               <h4 className="font-serif text-[0.95rem] font-semibold text-white mb-2.5">Address</h4>
               {/* TODO: Replace [Street/Building No.] with your actual address */}
               <address className="font-sans text-sm text-white/55 not-italic leading-[1.9]">
-                [Street/Building No.], Poblacion<br />
+                Brgy. Poblacion<br />
                 Santo Domingo, Ilocos Sur<br />
                 Philippines 2706
               </address>
