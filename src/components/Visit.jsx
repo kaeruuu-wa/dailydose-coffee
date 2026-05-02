@@ -163,7 +163,7 @@ export default function Visit() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: '-80px' }}
-            className="flex flex-col items-start"
+            className="flex flex-col items-center md:items-start"
           >
             <h4 className="font-serif text-[0.95rem] font-semibold text-white mb-6">Pay via GCash</h4>
 

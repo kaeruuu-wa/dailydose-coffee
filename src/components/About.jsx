@@ -43,7 +43,7 @@ export default function About() {
             </div>
 
             {/* Floating badge */}
-            <div className="absolute -bottom-4 -right-3 lg:bottom-6 lg:right-6
+            <div className="absolute bottom-3 right-3 lg:bottom-6 lg:right-6
                             bg-background dark:bg-zinc-900 border border-border dark:border-zinc-700 rounded-xl px-4 py-3.5
                             shadow-[0_4px_20px_rgba(0,0,0,0.07)]">
               <p className="font-serif text-sm font-semibold text-primary dark:text-white leading-none">Est. 2026</p>
@@ -89,7 +89,7 @@ export default function About() {
               className="font-sans text-sm text-secondary dark:text-zinc-400 leading-[1.95] mb-4"
             >
               DailyDose Coffee was born from a simple belief: that a great cup of coffee can shape
-              the start of anyone's day. Nestled in the heart of Poblacion, we set out to create a
+              the start of anyone's day. Nestled in the heart of Santo Domingo, we set out to create a
               space where quality and warmth go hand in hand — a place that feels like home from
               the very first sip.
             </motion.p>

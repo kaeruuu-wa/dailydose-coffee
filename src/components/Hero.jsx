@@ -40,10 +40,11 @@ export default function Hero() {
         >
           {/* Horizontal string */}
           <line x1="0" y1="1" x2="100%" y2="1" stroke="rgba(255,201,74,0.2)" strokeWidth="1" />
-          {/* Bulbs */}
+          {/* Bulbs — first 6 shown on all screens, remaining hidden below sm */}
           {BULBS.map(({ x, cord, delay, dur }, i) => (
             <g
               key={i}
+              className={i >= 6 ? 'hidden sm:block' : undefined}
               style={{
                 transformBox: 'fill-box',
                 transformOrigin: '50% 0%',
@@ -67,6 +68,27 @@ export default function Hero() {
             </g>
           ))}
         </svg>
+      </div>
+
+      {/* ── Decorative watermarks — clipped by section overflow-hidden ── */}
+      <div className="absolute inset-0 pointer-events-none select-none overflow-hidden z-[1]" aria-hidden="true">
+        <span
+          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-[28%]
+                     font-serif font-bold leading-none whitespace-nowrap
+                     text-white/[0.03] dark:text-white/[0.025]"
+          style={{ fontSize: 'clamp(3.5rem, 16vw, 8rem)' }}
+        >
+          DailyDose.
+        </span>
+        <span
+          className="absolute right-0 bottom-[18%] translate-x-[42%]
+                     font-serif font-bold leading-none whitespace-nowrap
+                     text-white/[0.02] dark:text-white/[0.015]"
+          style={{ fontSize: 'clamp(2rem, 10vw, 5rem)' }}
+        >
+          <span className="dark:hidden">Your Morning.</span>
+          <span className="hidden dark:inline">Your Evening.</span>
+        </span>
       </div>
 
       {/* ── Full-bleed background image with dark overlay ── */}
@@ -97,8 +119,9 @@ export default function Hero() {
           {/* Location label */}
           <motion.p
             variants={fadeUp}
-            className="font-sans text-[0.66rem] tracking-[0.26em] uppercase
-                       text-white/55 mb-7 flex items-center gap-2"
+            className="font-sans text-[0.6rem] sm:text-[0.66rem]
+                       tracking-[0.14em] sm:tracking-[0.26em] uppercase
+                       text-white/55 mb-7 flex items-center gap-2 flex-wrap"
           >
             <svg className="w-3 h-3 text-highlight flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
               <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/>
@@ -109,8 +132,8 @@ export default function Hero() {
           {/* Headline — tagline swaps with dark mode */}
           <motion.h1
             variants={fadeUp}
-            className="font-serif font-bold text-white leading-[1.03]"
-            style={{ fontSize: 'clamp(2.25rem, 5vw, 3.75rem)' }}
+            className="font-serif font-bold text-white leading-[1.03]
+                       text-3xl md:text-5xl lg:text-6xl"
           >
             <span className="dark:hidden">Your Morning</span>
             <span className="hidden dark:inline">Your Evening</span>
@@ -130,7 +153,7 @@ export default function Hero() {
           </motion.p>
 
           {/* Buttons */}
-          <motion.div variants={fadeUp} className="flex flex-wrap items-center gap-3">
+          <motion.div variants={fadeUp} className="flex flex-wrap items-center gap-3 max-[380px]:flex-col max-[380px]:items-stretch">
             <a
               href="#menu"
               className="inline-flex items-center gap-2 bg-highlight text-white
