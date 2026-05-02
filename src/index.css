@@ -1,0 +1,86 @@
+/* ── Google Fonts ──────────────────────────────────────────────
+   Playfair Display (headings) + Inter (body)
+   PLACEHOLDER: If you self-host fonts, remove this import and
+   add the font files to src/assets/, then use @font-face rules.
+──────────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #FFFFFF;
+    color: #0F0F0F;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  html.dark body {
+    background-color: #09090b;
+    color: #fafafa;
+  }
+
+  /* Refined scrollbar */
+  ::-webkit-scrollbar       { width: 5px; }
+  ::-webkit-scrollbar-track { background: #FFFFFF; }
+  ::-webkit-scrollbar-thumb { background: #C8A97E; border-radius: 4px; }
+
+  /* Focus ring */
+  *:focus-visible {
+    outline: 2px solid #C8A97E;
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+}
+
+/* ── CSS text logo ─────────────────────────────────────────────── */
+.logo-main {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: 1.12rem;
+  letter-spacing: -0.02em;
+  color: #0F0F0F;
+  line-height: 1;
+}
+.logo-sub {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+  font-size: 0.58rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #6B6560;
+  line-height: 1;
+}
+html.dark .logo-main { color: #ffffff; }
+html.dark .logo-sub  { color: rgba(255,255,255,0.40); }
+
+/* ── Hanging lights sway ───────────────────────────────────────── */
+@keyframes bulb-sway {
+  0%, 100% { transform: rotate(-2.5deg); }
+  50%       { transform: rotate(2.5deg); }
+}
+
+@layer utilities {
+  /* Fluid font size helper — used inline in components via style prop */
+  .text-fluid-hero   { font-size: clamp(3.2rem, 8vw, 5.8rem); }
+  .text-fluid-h2     { font-size: clamp(2rem, 4.5vw, 3rem); }
+  .text-fluid-h2-sm  { font-size: clamp(1.8rem, 3.5vw, 2.5rem); }
+
+  /* Hide scrollbar while keeping scroll functionality — used on menu tabs row */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
