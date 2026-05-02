@@ -8,11 +8,8 @@ const fadeUp = {
   }),
 }
 
-// TODO: Update hours when finalized
 const HOURS = [
-  { day: 'Monday – Friday', time: '7:00 AM – 10:00 PM' },
-  { day: 'Saturday',        time: '7:00 AM – 11:00 PM' },
-  { day: 'Sunday',          time: '8:00 AM – 10:00 PM' },
+  { day: 'Every Day', time: '6:00 PM – 12:00 AM' },
 ]
 
 const FacebookIcon = ({ className }) => (
@@ -122,9 +119,8 @@ export default function Visit() {
           >
             <h4 className="font-serif text-[0.95rem] font-semibold text-white mb-5">Follow Along</h4>
 
-            {/* Facebook — TODO: Replace href with actual page URL */}
             <a
-              href="#"
+              href="https://www.facebook.com/share/17TcEEMUFu/"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-4 border border-white/12 rounded-xl
@@ -141,9 +137,8 @@ export default function Visit() {
               </span>
             </a>
 
-            {/* Instagram — TODO: Replace href with actual profile URL */}
             <a
-              href="#"
+              href="https://www.instagram.com/ddose_coffee?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-4 border border-white/12 rounded-xl

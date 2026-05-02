@@ -11,7 +11,7 @@ const fadeUp = {
 
 const STATS = [
   { num: '50+', label: 'Menu Items' },
-  { num: '2025', label: 'Year Founded' },
+  { num: '2026', label: 'Year Founded' },
   { num: '1',    label: 'Neighborhood We Love' },
 ]
 
@@ -46,7 +46,7 @@ export default function About() {
             <div className="absolute -bottom-4 -right-3 lg:bottom-6 lg:right-6
                             bg-background dark:bg-zinc-900 border border-border dark:border-zinc-700 rounded-xl px-4 py-3.5
                             shadow-[0_4px_20px_rgba(0,0,0,0.07)]">
-              <p className="font-serif text-sm font-semibold text-primary dark:text-white leading-none">Est. 2025</p>
+              <p className="font-serif text-sm font-semibold text-primary dark:text-white leading-none">Est. 2026</p>
               <p className="font-sans text-[0.58rem] tracking-[0.22em] uppercase text-secondary dark:text-zinc-400 mt-1">
                 Santo Domingo, IS
               </p>
